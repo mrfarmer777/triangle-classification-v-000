@@ -18,6 +18,7 @@ class Triangle
     else
       "Yo triangle fucked, brah."
     end
+  end
 
 
 
