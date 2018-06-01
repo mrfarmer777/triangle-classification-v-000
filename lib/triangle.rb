@@ -11,11 +11,7 @@ class Triangle
 
   def kind
     if @sides.any? {|side| side<=0} || (@sone+@stwo)<@sthree
-      begin
-        raise TriangleError
-      rescue TriangleError=>error
-        puts error.message
-      end
+      raise TriangleError      
     else
       if @sone==@stwo && @sone==@sthree
         :equilateral
