@@ -9,7 +9,13 @@ class Triangle
   end
 
   def kind
+    if @sone==@stwo && @sone==@sthree
+      :equilateral
+    elsif @sone==@stwo || @sone==@sthree || @stwo==@sthree
+      
 
+      
+      
   end
 
   class TriangleError< StandardError
@@ -17,5 +23,5 @@ class Triangle
       "something"
     end
   end
-  
+
 end
