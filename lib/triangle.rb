@@ -10,7 +10,7 @@ class Triangle
   end
 
   def kind
-    begin
+    
     if @sone==@stwo && @sone==@sthree
       :equilateral
     elsif @sone==@stwo || @sone==@sthree || @stwo==@sthree
@@ -18,10 +18,11 @@ class Triangle
     elsif @sone!=@stwo && @stwo!=@sthree && @sone!=@sthree
       :scalene
     else
-      raise TriangleError
-    rescue TriangleError=>error
+      begin
+        raise TriangleError
+      rescue TriangleError=>error
         puts error.message
-    end
+      end
     end
   end
 
