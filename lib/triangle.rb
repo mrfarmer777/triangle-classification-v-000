@@ -10,7 +10,7 @@ class Triangle
   end
 
   def kind
-    if @sides.any? {|side| side<=0} || (@sone+@stwo)<=@sthree || (@stwo+@sthree)<=@sone
+    if @sides.any? {|side| side<=0} || (@sone+@stwo)<=@sthree || (@sone+@sthree)<=@stwo
       raise TriangleError
     else
       if @sone==@stwo && @sone==@sthree
