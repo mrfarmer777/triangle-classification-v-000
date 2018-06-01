@@ -10,7 +10,13 @@ class Triangle
   end
 
   def kind
-    if @sides.all? {|side| side>0} && (@sone+@stwo>@sthree)
+    if @sides.any? {|side| side<=0} || (@sone+@stwo)<@sthree
+      begin
+        raise TriangleError
+      rescue TriangleError=>error
+        puts error.message
+      end
+    else
       if @sone==@stwo && @sone==@sthree
         :equilateral
       elsif @sone==@stwo || @sone==@sthree || @stwo==@sthree
@@ -24,13 +30,7 @@ class Triangle
           puts error.message
         end
       end
-    else
-      begin
-        raise TriangleError
-      rescue TriangleError=>error
-        puts error.message
-      end
-    end
+    end  
   end
   class TriangleError< StandardError
     def message
