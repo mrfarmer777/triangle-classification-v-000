@@ -6,7 +6,7 @@ class Triangle
     @sone=sone
     @stwo=stwo
     @sthree=sthree
-    @sides=[son,stwo,sthree]
+    @sides=[sone,stwo,sthree]
   end
 
   def kind
