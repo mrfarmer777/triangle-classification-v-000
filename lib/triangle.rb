@@ -1,11 +1,12 @@
 class Triangle
   # write code here
-  attr_accessor :sone, :stwo, :sthree
+  attr_accessor :sone, :stwo, :sthree, :sides
 
   def initialize(sone,stwo,sthree)
     @sone=sone
     @stwo=stwo
     @sthree=sthree
+    @sides=[son,stwo,sthree]
   end
 
   def kind
